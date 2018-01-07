@@ -10,7 +10,7 @@ class Main {
         StreamTokenizer fileTokenizer = new StreamTokenizer(file);
         while ((fileTokenizer.nextToken()) != StreamTokenizer.TT_EOF) {
             if (fileTokenizer.ttype == StreamTokenizer.TT_WORD)
-                counter.incrementValue(toLowerCase(fileTokenizer.sval));
+                counter.incrementValue(toLowerCase(fileTokenizer.sval).replaceAll("[^A-Za-zА-Яа-я0-9]", ""));
         }
         file.close();
         counter.counterResult();
