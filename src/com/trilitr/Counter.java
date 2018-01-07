@@ -17,7 +17,7 @@ class Counter {
     }
 
     void counterResult() throws IOException {
-        FileWriter csvWriter = new FileWriter("..:\\....\\....\\...\\fileName.*");
+        FileWriter csvWriter = new FileWriter("..:\\....\\....\\...\\fileName.csv");
             for (Map.Entry<String, Integer> e : map.entrySet()) {
                 csvWriter.write(e.getValue() + "," + e.getKey() + "\n");
             }
